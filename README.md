@@ -1,4 +1,4 @@
-# Test project Weather-widget
+# Weather-widget project
 ### React-redux
 
 #### You can check this here: http://weather.nazarukroman.ru/
