@@ -28,7 +28,7 @@ export default class WeatherOutput extends Component {
         </ul>
       </div>
     } else {
-      return <h1 className='text-center'></h1>
+      return <h1 className='text-center visibility-hidden'>Empty content</h1>
     }
   }
 }

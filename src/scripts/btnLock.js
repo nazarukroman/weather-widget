@@ -3,13 +3,13 @@
     let submitButton = document.getElementsByClassName('btn-timeout');
 
     for(let i = 0; i < submitButton.length; i++) {
-      let timeout = parseInt(submitButton[i].getAttribute('timeout'));
+      let timeout = parseInt(submitButton[i].getAttribute('timeout'), 10);
       if(!timeout)
         continue;
 
       submitButton[i].addEventListener('click', function(event) {
         event.target.setAttribute('disabled', 'disabled');
-        let timeout = parseInt(event.target.getAttribute('timeout'));
+        let timeout = parseInt(event.target.getAttribute('timeout'), 10);
         setTimeout(function() {
           event.target.removeAttribute('disabled');
         }, timeout * 500);
