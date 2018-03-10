@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Weather from '../components/Weather';
 import * as weatherActions from '../actions/weatherAction';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../styles/index.css';
 
 class App extends Component {
   render() {

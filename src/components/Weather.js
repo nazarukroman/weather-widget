@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import WeatherOutput from './WeatherOutput';
+import '../scripts/btnLock';
 
 export default class Weather extends Component {
   constructor(props) {
@@ -13,7 +14,6 @@ export default class Weather extends Component {
 
   citySubmitHandler(e) {
     e.preventDefault();
-    console.log('input value', ReactDOM.findDOMNode(this.refs.cityInput).value);
     switch (ReactDOM.findDOMNode(this.refs.cityInput).value.length < 3) {
       case true:
         alert('Fill the city field. Min length is 3!');
@@ -25,30 +25,22 @@ export default class Weather extends Component {
         });
         this.props.setWeather(ReactDOM.findDOMNode(this.refs.cityInput).value);
     }
-
-    // if (this.props.setWeather(ReactDOM.findDOMNode(this.refs.cityInput).value) === undefined) {
-    //
-    // } else {
-    //   this.setState({
-    //     show: true
-    //   });
-    //
-    //   return this.props.setWeather(ReactDOM.findDOMNode(this.refs.cityInput).value);
-    // }
   }
 
 
   render() {
     const {weather} = this.props;
-    const {show} = this.state.show;
 
     return <div className='jumbotron'>
-      <form className='d-flex flex-wrap justify-content-center'>
 
-        <div className='form-group w-100 d-flex justify-content-center align-items-center mb-4'>
+      <h1 className='text-center mb-5'>Try enter your city.</h1>
+
+      <form className='d-flex flex-wrap justify-content-center mb-5'>
+
+        <div className='form-group w-100 d-flex flex-wrap justify-content-center align-items-center mb-4'>
           <label htmlFor='city-field' className='visibility-hidden'>Enter your city</label>
           <input type='text' id='city-field'
-                 className='form-control col-lg-3 col-md-5 col-sm-9 text-center'
+                 className='form-control col-lg-3 col-md-5 col-sm-9 text-center w-100'
                  placeholder='Enter your city'
                  defaultValue=''
                  ref='cityInput'
@@ -56,15 +48,16 @@ export default class Weather extends Component {
         </div>
         <input type='submit'
                id='city-field'
-               className='btn btn-primary'
-               placeholder='English please'
+               className='btn btn-primary btn-timeout'
                onClick={this.citySubmitHandler.bind(this)}
-               value='Send'/>
+               value='Send'
+               timeout='10'/>
 
       </form>
 
       {
-        weather.show ? <WeatherOutput weather={weather}/> : <h1>Try enter your city</h1>
+        !weather.error ? <WeatherOutput weather={weather}/> :
+          <h1 className='text-center'>Sorry error <b>«{weather.errorText}»</b> is here. <br/> Try it again later.</h1>
       }
 
     </div>

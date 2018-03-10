@@ -10,22 +10,22 @@ const initialState = {
   weatherData: {
     main: {}
   },
-  isLoaded: false,
-  error: '',
+  error: null,
+  errorText: '',
   show: false
 };
 
 export default function weather(state = initialState, action) {
   switch(action.type) {
     case GET_WEATHER_REQUEST:
-      return {...state, city: action.payload, isLoaded: action.isLoaded, show: false, error: ''};
+      return {...state, city: action.payload, show: false, error: false, errorText: ''};
 
     case GET_WEATHER_SUCCESS:
       return {...state, weatherData: action.payload, city: action.payloadCity,
-        isLoaded: action.isLoaded, show: true, error: ''};
+        show: true, error: false, errorText: ''};
 
     case GET_WEATHER_FAIL:
-      return {...state, error: action.payload, isLoaded: action.isLoaded, show: false};
+      return {...state, error: true, show: false, errorText: action.payload};
 
     default:
       return state;
