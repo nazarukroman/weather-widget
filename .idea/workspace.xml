@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fd9a63-9995-4e56-a2a5-33795f0a9cab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Weather.js" afterPath="$PROJECT_DIR$/src/components/Weather.js" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="btnLock.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="btnLock.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/btnLock.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -145,6 +154,7 @@
         <option value="$PROJECT_DIR$/src/actions/weatherAction.js" />
         <option value="$PROJECT_DIR$/src/components/Weather.js" />
         <option value="$PROJECT_DIR$/src/scripts/btnLock.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -188,6 +198,11 @@
             <path>
               <item name="weather-widget" type="b2602c69:ProjectViewProjectNode" />
               <item name="weather-widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-widget" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-widget" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather-widget" type="b2602c69:ProjectViewProjectNode" />
@@ -276,12 +291,12 @@
       <workItem from="1520099773441" duration="22389000" />
       <workItem from="1520207864537" duration="1191000" />
       <workItem from="1520630998399" duration="6000" />
-      <workItem from="1520631024519" duration="15628000" />
+      <workItem from="1520631024519" duration="15702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39214000" />
+    <option name="totallyTimeSpent" value="39288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
@@ -714,6 +729,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
         </state>
       </provider>
