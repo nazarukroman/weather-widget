@@ -51,7 +51,7 @@ export default class Weather extends Component {
                className='btn btn-primary btn-timeout'
                onClick={this.citySubmitHandler.bind(this)}
                value='Send'
-               timeout='10'/>
+               timeout='5'/>
 
       </form>
 
