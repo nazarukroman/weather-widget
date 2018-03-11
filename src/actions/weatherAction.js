@@ -27,6 +27,9 @@ export function setWeather(city) {
                 payloadCity: city,
               })
             })
+        } else if (response.status !== 200) {
+          alert('Looks like there was a problem. Try again. Status Code: ' +
+            response.status);
         }
 
       })
